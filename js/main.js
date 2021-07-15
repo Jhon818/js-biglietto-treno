@@ -4,32 +4,19 @@ va applicato uno sconto del 40% per gli over 65.*/
 //il prezzo del biglietto è definito in base ai km (0.21 € al km)
 
 var EuorKm = 0.21;
-alert("Quanti km devi fare?");
+var KmViaggio = prompt("Quanti km devi fare?");
+console.log(KmViaggio);
 
-var KmViaggio;
-prompt(KmViaggio);
+var AnniPasseggero = prompt("Quanti anni hai?");
+var costoIntero = EuorKm * KmViaggio;
 
-alert("Quanti anni hai?")
-
-var AnniPasseggero;
-prompt(AnniPasseggero);
-
- var Sconto;
+ var Sconto = 0;
+ 
 if (AnniPasseggero < 18) {
-   
-
-Sconto = EuorKm * (20/100);
-
-    alert(Sconto);
+Sconto = costoIntero * (20/100);
 
 }else if (AnniPasseggero >= 65){
-Sconto = EuorKm * (40/100);
+Sconto = costoIntero * (40/100);
 }
 
-else{
-var costoIntero;
-
-costoIntero = EuorKm * KmViaggio;
-
-alert(costoIntero);
-}
+alert(costoIntero - Sconto);
