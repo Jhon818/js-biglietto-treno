@@ -12,6 +12,9 @@ var costoIntero = EuorKm * KmViaggio;
 
  var Sconto = 0;
  
+//  var num = 5.56789;
+//  var n = num.toFixed(2);
+
 if (AnniPasseggero < 18) {
 Sconto = costoIntero * (20/100);
 
@@ -19,4 +22,7 @@ Sconto = costoIntero * (20/100);
 Sconto = costoIntero * (40/100);
 }
 
-alert(costoIntero - Sconto);
+var prezzoBiglietto = costoIntero - Sconto; 
+var prezzoReale = prezzoBiglietto.toFixed(2);
+
+alert(prezzoReale);
